@@ -1,0 +1,73 @@
+{
+  "password": "1_S0Bb7BhiUIcFDeMGebrC14",
+  "privateCollections": [],
+  "publicPostCollections": ["sergeants", "tableConfig", "evaluation", "evaluation2", "roster"],
+  "resources": {
+    "sergeants": {
+      "label": "Сержанти",
+      "labelPlural": "Сержанти",
+      "labelKey": "fullName",
+      "listFields": ["rank", "fullName", "unit", "position"],
+      "fields": [
+        { "name": "rank", "label": "Звання", "type": "text" },
+        { "name": "fullName", "label": "ПІБ", "type": "text", "required": true },
+        { "name": "unit", "label": "Підрозділ", "type": "text" },
+        { "name": "position", "label": "Посада", "type": "textarea" }
+      ]
+    },
+    "evaluation": {
+      "label": "Оцінювання",
+      "labelPlural": "Оцінювання",
+      "labelKey": "name",
+      "listFields": ["rank", "name", "score"],
+      "fields": [
+        { "name": "rank", "label": "Звання", "type": "text" },
+        { "name": "name", "label": "ПІБ", "type": "text", "required": true },
+        { "name": "position", "label": "Посада", "type": "textarea" },
+        { "name": "morning", "label": "09.00–13.00", "type": "text" },
+        { "name": "evening", "label": "14.00–18.00", "type": "text" },
+        { "name": "grade", "label": "Оцінка", "type": "text" },
+        { "name": "score", "label": "Бал", "type": "text" }
+      ]
+    },
+    "evaluation2": {
+      "label": "Оцінювання 2",
+      "labelPlural": "Оцінювання 2",
+      "labelKey": "name",
+      "listFields": ["rank", "name", "grade", "score"],
+      "fields": [
+        { "name": "rank", "label": "Звання", "type": "text" },
+        { "name": "name", "label": "ПІБ", "type": "text", "required": true },
+        { "name": "position", "label": "Посада", "type": "textarea" },
+        { "name": "morning", "label": "09.00–13.00", "type": "text" },
+        { "name": "evening", "label": "14.00–18.00", "type": "text" },
+        { "name": "grade", "label": "Оцінка", "type": "text" },
+        { "name": "score", "label": "Бал", "type": "text" }
+      ]
+    },
+    "roster": {
+      "label": "Перелік О/С",
+      "labelPlural": "Перелік О/С",
+      "labelKey": "name",
+      "listFields": ["unit", "rank", "name", "position"],
+      "fields": [
+        { "name": "unit", "label": "Підрозділ", "type": "text" },
+        { "name": "rank", "label": "Звання", "type": "text" },
+        { "name": "name", "label": "ПІБ", "type": "text", "required": true },
+        { "name": "position", "label": "Посада", "type": "textarea" },
+        { "name": "grade", "label": "Оцінка", "type": "text" },
+        { "name": "score", "label": "Бал", "type": "text" }
+      ]
+    },
+    "tableConfig": {
+      "label": "Налаштування таблиці",
+      "labelPlural": "Налаштування таблиці",
+      "labelKey": "id",
+      "listFields": ["id"],
+      "fields": [
+        { "name": "row2", "label": "Верхній рядок (текст)", "type": "textarea" },
+        { "name": "row1", "label": "Колонки (JSON)", "type": "textarea" }
+      ]
+    }
+  }
+}

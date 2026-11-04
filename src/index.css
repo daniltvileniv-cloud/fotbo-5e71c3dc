@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* Design tokens — tactical military palette */
+@theme {
+  --color-primary: #0A0A0A;
+  --color-secondary: #1A1A1A;
+  --color-accent: #8BC34A;
+  --color-bg: #0A0A0A;
+  --color-surface: #1A1A1A;
+  --color-surface-alt: #2A2D26;
+  --color-text: #E5E5E5;
+  --color-text-muted: #8A8678;
+  --color-danger: #8C2F26;
+  --color-success: #4CAF50;
+  --color-table-header: #4a7c3f;
+  --color-table-header-text: #1A1A1A;
+
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+/* Dark reset */
+* {
+  scrollbar-color: var(--color-surface) var(--color-bg);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* Playfair Display for all headings — tactical green, uppercase */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Custom scrollbar for the table area */
+.table-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-surface);
+  border-radius: 2px;
+}
+
+/* Tactical topographic pattern — very faint green on dark bg */
+.topo-lines {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 1px,
+      rgba(139, 195, 74, 0.04) 1px,
+      rgba(139, 195, 74, 0.04) 2px,
+      transparent 2px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 1px,
+      rgba(139, 195, 74, 0.03) 1px,
+      rgba(139, 195, 74, 0.03) 2px,
+      transparent 2px,
+      transparent 60px
+    );
+}
+
+/* Tactical crosshair pattern */
+.crosshair-pattern {
+  background-image:
+    radial-gradient(circle, rgba(139, 195, 74, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Green accent glow */
+.glow-tactical {
+  box-shadow: 0 0 30px rgba(139, 195, 74, 0.08);
+}
+
+/* Military-grade border */
+.border-tactical {
+  border: 1px solid rgba(139, 195, 74, 0.2);
+}
+
+/* HUD-style scan line */
+.scan-line {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 2px,
+    rgba(139, 195, 74, 0.015) 2px,
+    rgba(139, 195, 74, 0.015) 4px
+  );
+}
+
+/* Border-2 utility */
+.border-2 {
+  border-width: 2px;
+}
+
+/* Placeholder inside contenteditable cells */
+[contenteditable][data-placeholder]:empty:before {
+  content: attr(data-placeholder);
+  color: rgba(138, 134, 120, 0.25);
+  pointer-events: none;
+}
